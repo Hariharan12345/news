@@ -1,0 +1,49 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>news-detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content> -->
+
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/news">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>{{load?.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col no-padding>
+      <ion-img [src]="load?.urlToImage"></ion-img>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <i  style="color: blue;">{{load?.author}}</i>
+    </ion-col>
+    <ion-col>
+      <i  style="color: blue;">{{load?.publishedAt}}</i>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p style="color: crimson;">{{load?.description}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>{{load?.content}}</p>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+
+</ion-content>
